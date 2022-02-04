@@ -1,0 +1,20 @@
+{
+    "compilerOptions": {
+        "target": "ES5",
+        "esModuleInterop": true,
+        "downlevelIteration": true,
+        "experimentalDecorators": true,
+        "jsx": "react",
+        "jsxFactory": "createCell",
+        "jsxFragmentFactory": "Fragment",
+        "lib": ["ES2021", "DOM", "DOM.Iterable"]
+    },
+    "include": ["source/*"],
+    "typedocOptions": {
+        "name": "MarkdownArea Element",
+        "excludeExternals": true,
+        "excludePrivate": true,
+        "readme": "./ReadMe.md",
+        "out": "docs/"
+    }
+}
