@@ -1,6 +1,6 @@
 {
     "name": "markdown-area-element",
-    "version": "0.2.2",
+    "version": "0.2.3",
     "license": "LGPL-3.0",
     "author": "shiy2008@gmail.com",
     "description": "MarkDown Editor element based on Web Components & WebCell v2",

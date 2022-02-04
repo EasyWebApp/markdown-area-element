@@ -1,9 +1,7 @@
-import * as TurnDown from 'turndown';
+import TurnDown from 'turndown';
 import { gfm } from 'turndown-plugin-gfm';
 
 const Empty_HREF = /^(#|javascript:\s*void\(0\);?\s*)$/;
-
-type TurnDownGFM = (td: TurnDown) => void;
 
 export class SafeTurnDown extends TurnDown {
     constructor(options?: any) {
@@ -16,7 +14,7 @@ export class SafeTurnDown extends TurnDown {
             ...options
         });
 
-        this.use(gfm as TurnDownGFM)
+        this.use(gfm)
             .addRule('non_url', {
                 filter: node =>
                     ['a', 'area'].includes(node.nodeName.toLowerCase()) &&
