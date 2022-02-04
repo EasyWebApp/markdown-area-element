@@ -6,7 +6,7 @@ import { marked } from 'marked';
 
 import { SafeTurnDown } from './TurnDown';
 
-export interface MarkdownEditorProps extends WebFieldProps {}
+export interface MarkdownAreaElementProps extends WebFieldProps {}
 
 const parser = new SafeTurnDown(),
     fileMap = new WeakMap<HTMLElement, Map<File, string>>();
@@ -22,7 +22,7 @@ const parser = new SafeTurnDown(),
         }
     }
 })
-export class MarkdownEditor extends mixinForm<MarkdownEditorProps>() {
+export class MarkdownAreaElement extends mixinForm<MarkdownAreaElementProps>() {
     private core: any;
 
     @watch
@@ -137,7 +137,7 @@ export class MarkdownEditor extends mixinForm<MarkdownEditorProps>() {
 
         event.preventDefault();
 
-        const list = MarkdownEditor.filterData(...items);
+        const list = MarkdownAreaElement.filterData(...items);
 
         const parts = await Promise.all(list.map(this.loadData));
 
