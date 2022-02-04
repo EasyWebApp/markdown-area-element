@@ -1,7 +1,7 @@
 import { WebFieldProps, component, mixinForm, watch } from 'web-cell';
 import { importCSS, parseDOM, insertToCursor } from 'web-utility';
 import { FileCell, UploadEvent } from 'file-cell';
-import MarkdownIME from 'markdown-ime';
+import * as MarkdownIME from 'markdown-ime';
 import { marked } from 'marked';
 
 import { SafeTurnDown } from './TurnDown';
@@ -12,7 +12,7 @@ const parser = new SafeTurnDown(),
     fileMap = new WeakMap<HTMLElement, Map<File, string>>();
 
 @component({
-    tagName: 'markdown-editor',
+    tagName: 'markdown-area',
     style: {
         ':host': {
             minHeight: '2.3rem'
